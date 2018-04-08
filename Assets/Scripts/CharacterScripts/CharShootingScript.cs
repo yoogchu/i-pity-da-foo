@@ -10,6 +10,8 @@ public class CharShootingScript : MonoBehaviour {
     public AudioClip fireClip;
     public AudioClip chargingClip;
     public CharControlScript ccScript;
+    public LaunchMeshScript launchMeshScript;
+    public GameObject launchMesh;
 
     // Set Values
     public float minLaunchForce = 15f;
@@ -32,8 +34,6 @@ public class CharShootingScript : MonoBehaviour {
 	}
 	
 	private void Update () {
-        // Reset Launch Arc
-
         // At max charge but not yet fired
         if (ammo > 0 && ccScript.isAiming)
         {
@@ -51,14 +51,23 @@ public class CharShootingScript : MonoBehaviour {
                 // Play charging sounds
                 //shootingAudio.clip = chargingClip;
                 //shootingAudio.Play();
+
+                // Render Launch Arc
+                float angle = Vector3.Angle(Vector3.forward, new Vector3(0, releasePoint.forward.y, 1));
+                // HACK: Launch arc calcs don't really work for negative angles
+                angle = releasePoint.forward.y > 0 ? angle : 0.1f;
+                launchMeshScript.RedrawArc(mCurrentLaunchForce / 5, angle);
             }
             else if (Input.GetButton("Fire1") && !mFired)
             {
                 // Holding the button, but not yet fired
                 mCurrentLaunchForce += mChargeSpeed * Time.deltaTime;
 
-                // Set launch arc?
-
+                // Set launch arc to new direction and power
+                float angle = Vector3.Angle(Vector3.forward, new Vector3(0, releasePoint.forward.y, 1));
+                angle = releasePoint.forward.y > 0 ? angle : 0.1f;
+                launchMeshScript.RedrawArc(mCurrentLaunchForce / 5, angle);
+                Debug.DrawRay(releasePoint.position + 2 * releasePoint.forward, releasePoint.forward * mCurrentLaunchForce);
             }
             else if (Input.GetButtonUp("Fire1") && !mFired)
             {
@@ -93,6 +102,10 @@ public class CharShootingScript : MonoBehaviour {
         // Reset Launch force
         mCurrentLaunchForce = minLaunchForce;
 
+        // Clear the launch arc mesh after firing
+        launchMeshScript.ClearMesh();
+
+        // Take down ammo count
         ammo--;
     }
 }

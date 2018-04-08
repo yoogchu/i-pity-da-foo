@@ -15,11 +15,12 @@ public class CharControlScript : MonoBehaviour {
     public bool isGrounded;
 
     // Character Values
-    public float walkSpeed = 4f;
+    public float walkSpeed = 3f;
     public float sprintSpeed = 5f;
     public float crouchSpeed = 2f;
-    public float aimSpeed = 2f;
+    public float aimSpeed = .75f;
     public float rotateSpeed = 8f;
+    public float distToGround = 0.5f;
 
     // Character States
     public bool onGround;
@@ -50,8 +51,8 @@ public class CharControlScript : MonoBehaviour {
         mTransform = this.transform;
 
         //example of how to get access to certain limbs
-        leftFoot = this.transform.Find("mixamorig:Hips/mixamorig:LeftUpLeg/mixamorig:LeftLeg/mixamorig:LeftFoot");
-        rightFoot = this.transform.Find("mixamorig:Hips/mixamorig:RightUpLeg/mixamorig:RightLeg/mixamorig:RightFoot");
+        leftFoot = this.transform.Find("Character/mixamorig:Hips/mixamorig:LeftUpLeg/mixamorig:LeftLeg/mixamorig:LeftFoot");
+        rightFoot = this.transform.Find("Character/mixamorig:Hips/mixamorig:RightUpLeg/mixamorig:RightLeg/mixamorig:RightFoot");
 
         if (leftFoot == null || rightFoot == null)
             Debug.Log("One of the feet could not be found");
@@ -69,7 +70,7 @@ public class CharControlScript : MonoBehaviour {
     void MovementNormal()
     {
         // Increase drag depending on input amount
-        if (cinput.moveAmount > .05f)
+        if (cinput.moveAmount > .05f || !onGround)
             rbody.drag = 0;
         else
             rbody.drag = 4;
@@ -82,7 +83,9 @@ public class CharControlScript : MonoBehaviour {
             speed = crouchSpeed;
 
         Vector3 dir = mTransform.forward * (speed * cinput.moveAmount);
-        rbody.velocity = dir;
+
+        if (onGround)
+            rbody.velocity = dir;
     }
 
     // Handle Rotation on Normal Case
@@ -104,7 +107,7 @@ public class CharControlScript : MonoBehaviour {
     // Update Animations on Normal Case
     void HandleAnimationsNormal()
     {
-        float anim_v = cinput.moveAmount;
+        float anim_v = cinput.moveAmount * .7f;
         anim.SetFloat("Vertical", anim_v, 0.15f, delta);
     }
 
@@ -125,7 +128,8 @@ public class CharControlScript : MonoBehaviour {
     {
         float speed = aimSpeed;
         Vector3 dir = cinput.moveDirection * speed;
-        rbody.velocity = dir;
+        if (onGround)
+            rbody.velocity = dir;
     }
 
     public void FixedUpdate()
@@ -149,10 +153,32 @@ public class CharControlScript : MonoBehaviour {
     {
         // Update state based on input handler
         isAiming = cinput.aimInput;
+        onGround = OnGroundTest();
 
         // If state is updated, update animator
         anim.SetBool("sprint", isRunning);
         anim.SetBool("crouching", isCrouching);
         anim.SetBool("aiming", isAiming);
+        anim.SetBool("onGround", onGround);
+    }
+
+    public bool OnGroundTest()
+    {
+        bool isGround = false;
+
+        Vector3 origin = mTransform.position + (Vector3.up * distToGround);
+        Vector3 dir = -Vector3.up;
+        float dist = distToGround + 0.2f;
+        RaycastHit hit;
+        Debug.DrawRay(origin, dir * dist);
+
+        if (Physics.Raycast(origin, dir, out hit, dist))
+        {
+            isGround = true;
+            Vector3 targetPos = hit.point;
+            mTransform.position = targetPos;
+        }
+
+        return isGround;
     }
 }

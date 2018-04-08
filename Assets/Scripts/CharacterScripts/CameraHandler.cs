@@ -56,7 +56,7 @@ public class CameraHandler : MonoBehaviour {
             speed = aimSpeed;
 
         Vector3 targetPos = Vector3.Lerp(mTransform.position, target.position, speed);
-        mTransform.position = target.position;
+        mTransform.position = targetPos;
     }
 
     // Update the position of the camera and pivot depending on character states
@@ -65,6 +65,7 @@ public class CameraHandler : MonoBehaviour {
         float targetX = normalX;
         float targetY = normalY;
         float targetZ = normalZ;
+
         if (ccScript.isCrouching)
             targetY = crouchY;
 
@@ -95,6 +96,7 @@ public class CameraHandler : MonoBehaviour {
         mouseX = Input.GetAxis("Mouse X");
         mouseY = Input.GetAxis("Mouse Y");
 
+        // Add smooting to camera movement if necessary
         if (turnSmooth > 0)
         {
             smoothX = Mathf.SmoothDamp(smoothX, mouseX, ref smoothXVel, turnSmooth);

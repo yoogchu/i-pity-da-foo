@@ -44,9 +44,9 @@ public class CameraHandler : MonoBehaviour {
         target = ccScript.mTransform;
     }
 
-    public void FixedUpdate()
+    public void Update()
     {
-        delta = Time.fixedDeltaTime;
+        delta = Time.deltaTime;
 
         HandlePositions();
         HandleRotations();

@@ -94,6 +94,7 @@ public class CharShootingScript : MonoBehaviour {
         GameObject ragMain = ragInstance.transform.Find("mixamorig:Hips").gameObject;
         Rigidbody ragMainRbody = ragMain.GetComponent<Rigidbody>();
         ragMainRbody.velocity = mCurrentLaunchForce * releasePoint.forward;
+		ragInstance.tag = "Projectile";
 
         // Play firing sound
         //shootingAudio.clip = fireClip;

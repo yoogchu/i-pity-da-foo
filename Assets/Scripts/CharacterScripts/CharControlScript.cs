@@ -12,7 +12,8 @@ public class CharControlScript : MonoBehaviour {
 
     private Transform leftFoot;
     private Transform rightFoot;
-    public bool isGrounded;
+    public bool explode;
+    public float explodeTime;
 
     // Character Values
     public float walkSpeed = 3f;
@@ -58,8 +59,6 @@ public class CharControlScript : MonoBehaviour {
             Debug.Log("One of the feet could not be found");
 
         anim.applyRootMotion = false;
-
-        isGrounded = false;
 
         //never sleep so that OnCollisionStay() always reports for ground check
         rbody.sleepThreshold = 0f;
@@ -152,8 +151,13 @@ public class CharControlScript : MonoBehaviour {
     public void Update()
     {
         // Update state based on input handler
-        isAiming = cinput.aimInput;
-        onGround = OnGroundTest();
+        if (!explode || Time.time - explodeTime > 1f)
+        {
+            explodeTime = 0;
+            explode = false;
+            isAiming = cinput.aimInput;
+            onGround = OnGroundTest();
+        }
 
         // If state is updated, update animator
         anim.SetBool("sprint", isRunning);
@@ -180,5 +184,13 @@ public class CharControlScript : MonoBehaviour {
         }
 
         return isGround;
+    }
+
+    public void Explode()
+    {
+        rbody.velocity += Vector3.up * 5f;
+        explode = true;
+        onGround = false;
+        explodeTime = Time.time;
     }
 }

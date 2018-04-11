@@ -37,7 +37,13 @@ public class CharShootingScript : MonoBehaviour {
         // At max charge but not yet fired
         if (ammo > 0 && ccScript.isAiming)
         {
-            if (mCurrentLaunchForce >= maxLaunchForce && !mFired)
+            if (ccScript.explode)
+            {
+                Debug.Log("Explode");
+                mCurrentLaunchForce = minLaunchForce;
+                Fire();
+                ccScript.isAiming = false;
+            } else if (mCurrentLaunchForce >= maxLaunchForce && !mFired)
             {
                 mCurrentLaunchForce = maxLaunchForce;
                 Fire();
@@ -53,10 +59,10 @@ public class CharShootingScript : MonoBehaviour {
                 //shootingAudio.Play();
 
                 // Render Launch Arc
-                float angle = Vector3.Angle(Vector3.forward, new Vector3(0, releasePoint.forward.y, 1));
+                float angle = Vector3.Angle(Vector3.forward, new Vector3(0, releasePoint.forward.y + .1f, 1));
                 // HACK: Launch arc calcs don't really work for negative angles
-                angle = releasePoint.forward.y > 0 ? angle : 0.1f;
-                launchMeshScript.RedrawArc(mCurrentLaunchForce / 5, angle);
+                angle = releasePoint.forward.y > 0 ? angle : -angle;
+                launchMeshScript.RedrawArc(mCurrentLaunchForce / 6, angle);
             }
             else if (Input.GetButton("Fire1") && !mFired)
             {
@@ -64,9 +70,10 @@ public class CharShootingScript : MonoBehaviour {
                 mCurrentLaunchForce += mChargeSpeed * Time.deltaTime;
 
                 // Set launch arc to new direction and power
-                float angle = Vector3.Angle(Vector3.forward, new Vector3(0, releasePoint.forward.y, 1));
-                angle = releasePoint.forward.y > 0 ? angle : 0.1f;
-                launchMeshScript.RedrawArc(mCurrentLaunchForce / 5, angle);
+                float angle = Vector3.Angle(Vector3.forward, new Vector3(0, releasePoint.forward.y + .1f, 1));
+                //angle = releasePoint.forward.y > 0 ? angle : 0.1f;
+                angle = releasePoint.forward.y > 0 ? angle : -angle;
+                launchMeshScript.RedrawArc(mCurrentLaunchForce / 6, angle);
                 Debug.DrawRay(releasePoint.position + 2 * releasePoint.forward, releasePoint.forward * mCurrentLaunchForce);
             }
             else if (Input.GetButtonUp("Fire1") && !mFired)

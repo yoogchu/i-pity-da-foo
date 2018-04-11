@@ -6,7 +6,7 @@ using UnityEngine;
 public class LaunchMeshScript : MonoBehaviour {
     Mesh mesh;
     public float meshWidth;
-    public int resolution = 10;
+    public int resolution = 25;
 
     private float g;
     public float angle;
@@ -67,22 +67,21 @@ public class LaunchMeshScript : MonoBehaviour {
         Vector3[] arcArray = new Vector3[resolution + 1];
 
         radianAngle = Mathf.Deg2Rad * angle;
-        float maxDistance = (vel * vel * Mathf.Sin(2 * radianAngle)) / g;
 
         for (int i = 0; i <= resolution; i++)
         {
             float t = (float)i / (float)resolution;
-            arcArray[i] = CalculateArcPoint(t, maxDistance);
+            arcArray[i] = CalculateArcPoint(t);
         }
 
         return arcArray;
     }
 
     // Calculate individual point coords given specific params
-    Vector3 CalculateArcPoint(float t, float maxDistance)
+    Vector3 CalculateArcPoint(float t)
     {
-        float x = t * maxDistance;
-        float y = x * Mathf.Tan(radianAngle) - (g * x * x) / (2 * vel * vel * Mathf.Cos(radianAngle) * Mathf.Cos(radianAngle));
+        float x = t * vel * Mathf.Cos(radianAngle);
+        float y = t * vel * Mathf.Sin(radianAngle) - .5f * g * t * t;
         return new Vector3(x, y);
     }
 }

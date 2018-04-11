@@ -49,8 +49,8 @@ public class CharShootingScript : MonoBehaviour {
                 mCurrentLaunchForce = minLaunchForce;
 
                 // Play charging sounds
-                //shootingAudio.clip = chargingClip;
-                //shootingAudio.Play();
+                shootingAudio.clip = chargingClip;
+                shootingAudio.Play();
 
                 // Render Launch Arc
                 float angle = Vector3.Angle(Vector3.forward, new Vector3(0, releasePoint.forward.y, 1));
@@ -97,8 +97,8 @@ public class CharShootingScript : MonoBehaviour {
 		ragInstance.tag = "Projectile";
 
         // Play firing sound
-        //shootingAudio.clip = fireClip;
-        //shootingAudio.Play();
+        shootingAudio.clip = fireClip;
+        shootingAudio.Play();
 
         // Reset Launch force
         mCurrentLaunchForce = minLaunchForce;

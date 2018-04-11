@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4461605, g: 0.6250888, b: 0.72317517, a: 1}
+  m_IndirectSpecularColor: {r: 0.44616896, g: 0.6250756, b: 0.72317654, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -976,7 +976,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh12850
+  m_Name: pb_Mesh22178
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -1106,7 +1106,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh12724
+  m_Name: pb_Mesh22080
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -1273,12 +1273,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!43 &101299276
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13260
+  m_Name: pb_Mesh22546
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -1408,7 +1412,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13568
+  m_Name: pb_Mesh22850
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -1538,7 +1542,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh12772
+  m_Name: pb_Mesh22112
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -1668,7 +1672,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13850
+  m_Name: pb_Mesh23114
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -2198,7 +2202,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh12866
+  m_Name: pb_Mesh22194
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -2328,7 +2332,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13244
+  m_Name: pb_Mesh22530
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -2458,7 +2462,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13228
+  m_Name: pb_Mesh22512
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -2588,7 +2592,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13540
+  m_Name: pb_Mesh22820
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -3160,6 +3164,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!1 &225643469
 GameObject:
   m_ObjectHideFlags: 0
@@ -4137,12 +4145,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!43 &260174730
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13806
+  m_Name: pb_Mesh23078
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -4672,7 +4684,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13734
+  m_Name: pb_Mesh23004
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -5267,7 +5279,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13104
+  m_Name: pb_Mesh22418
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -6590,12 +6602,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!43 &365431888
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13128
+  m_Name: pb_Mesh22444
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -6725,7 +6741,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh14098
+  m_Name: pb_Mesh23352
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -7689,12 +7705,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!43 &417232576
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh12644
+  m_Name: pb_Mesh21998
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -7824,7 +7844,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13400
+  m_Name: pb_Mesh22690
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -7954,7 +7974,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13356
+  m_Name: pb_Mesh22642
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -8121,6 +8141,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!1 &490855460
 GameObject:
   m_ObjectHideFlags: 0
@@ -9771,6 +9795,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!1 &540075757
 GameObject:
   m_ObjectHideFlags: 0
@@ -9883,12 +9911,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!43 &557537402
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13926
+  m_Name: pb_Mesh23184
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -10418,7 +10450,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13584
+  m_Name: pb_Mesh22866
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -10585,12 +10617,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!43 &595597166
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13752
+  m_Name: pb_Mesh23022
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -10720,7 +10756,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh14150
+  m_Name: pb_Mesh23408
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -11250,7 +11286,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh14082
+  m_Name: pb_Mesh23336
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -11417,12 +11453,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!43 &634494677
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh12624
+  m_Name: pb_Mesh21976
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -11952,7 +11992,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh12592
+  m_Name: pb_Mesh21952
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -13500,12 +13540,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!43 &689411995
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh12916
+  m_Name: pb_Mesh22248
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -13635,7 +13679,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh14166
+  m_Name: pb_Mesh23424
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -13765,7 +13809,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13022
+  m_Name: pb_Mesh22358
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -14295,7 +14339,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13614
+  m_Name: pb_Mesh22898
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -14425,7 +14469,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13490
+  m_Name: pb_Mesh22782
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -15085,6 +15129,115 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entityType: 0
+--- !u!1 &784247527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 784247529}
+  - component: {fileID: 784247528}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &784247528
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 784247527}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!4 &784247529
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 784247527}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 978662166}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &799910721
 GameObject:
   m_ObjectHideFlags: 0
@@ -15490,7 +15643,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh12882
+  m_Name: pb_Mesh22210
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -15620,7 +15773,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh14012
+  m_Name: pb_Mesh23266
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -15787,6 +15940,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!1 &847398146
 GameObject:
   m_ObjectHideFlags: 0
@@ -16992,7 +17149,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13458
+  m_Name: pb_Mesh22750
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -17522,7 +17679,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13276
+  m_Name: pb_Mesh22562
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -18307,6 +18464,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!1 &962213941
 GameObject:
   m_ObjectHideFlags: 0
@@ -19601,6 +19762,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 57429235}
+  - {fileID: 784247529}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19617,22 +19779,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ragdoll: {fileID: 1950718428013264, guid: 3062a56d86b4bc744885af457281cb7f, type: 2}
   releasePoint: {fileID: 1051727066}
-  shootingAudio: {fileID: 0}
-  fireClip: {fileID: 0}
-  chargingClip: {fileID: 0}
+  shootingAudio: {fileID: 784247528}
+  fireClip: {fileID: 8300000, guid: 6499c52b072c0450d9bd8abdb7b67288, type: 3}
+  chargingClip: {fileID: 8300000, guid: 7fa9c714fcb134c3ba3d6cf0e9dc07a8, type: 3}
   ccScript: {fileID: 978662163}
   launchMeshScript: {fileID: 670967085}
   launchMesh: {fileID: 670967083}
   minLaunchForce: 35
   maxLaunchForce: 150
-  maxChargeTime: 0.75
+  maxChargeTime: 3
   ammo: 5
 --- !u!43 &983423137
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh14064
+  m_Name: pb_Mesh23318
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -20225,7 +20387,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13144
+  m_Name: pb_Mesh22460
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -20355,7 +20517,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13866
+  m_Name: pb_Mesh23130
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -20885,7 +21047,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13986
+  m_Name: pb_Mesh23250
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -21437,6 +21599,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!1 &1081275306
 GameObject:
   m_ObjectHideFlags: 0
@@ -21835,6 +22001,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!1 &1087556075
 GameObject:
   m_ObjectHideFlags: 0
@@ -22370,6 +22540,115 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entityType: 0
+--- !u!1 &1104322586
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1104322588}
+  - component: {fileID: 1104322587}
+  m_Layer: 0
+  m_Name: blockAudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1104322587
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1104322586}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!4 &1104322588
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1104322586}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 39
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1104974710
 GameObject:
   m_ObjectHideFlags: 0
@@ -22789,7 +23068,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh12834
+  m_Name: pb_Mesh22162
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -22957,12 +23236,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!43 &1122718886
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13006
+  m_Name: pb_Mesh22342
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -23492,7 +23775,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13424
+  m_Name: pb_Mesh22716
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -25791,6 +26074,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!1 &1150922886
 GameObject:
   m_ObjectHideFlags: 0
@@ -25833,6 +26120,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!1 &1162840201
 GameObject:
   m_ObjectHideFlags: 0
@@ -25919,7 +26210,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13834
+  m_Name: pb_Mesh23098
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -26049,7 +26340,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh12660
+  m_Name: pb_Mesh22014
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -26579,7 +26870,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh14032
+  m_Name: pb_Mesh23286
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -26709,7 +27000,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh12970
+  m_Name: pb_Mesh22302
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -26876,12 +27167,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!43 &1237628976
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh12942
+  m_Name: pb_Mesh22276
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -27011,7 +27306,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13314
+  m_Name: pb_Mesh22600
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -28396,12 +28691,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!43 &1250823949
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh14130
+  m_Name: pb_Mesh23384
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -28531,7 +28830,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13682
+  m_Name: pb_Mesh22956
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -28661,7 +28960,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh12706
+  m_Name: pb_Mesh22062
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -28791,7 +29090,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh14048
+  m_Name: pb_Mesh23302
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -28921,7 +29220,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13954
+  m_Name: pb_Mesh23216
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -29051,7 +29350,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13894
+  m_Name: pb_Mesh23150
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -29181,7 +29480,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13186
+  m_Name: pb_Mesh22494
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -30178,6 +30477,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!1 &1511860807
 GameObject:
   m_ObjectHideFlags: 0
@@ -30238,12 +30541,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!43 &1522345199
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13442
+  m_Name: pb_Mesh22734
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -30540,6 +30847,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!1 &1570053186
 GameObject:
   m_ObjectHideFlags: 0
@@ -31052,12 +31363,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!43 &1582520379
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh12756
+  m_Name: pb_Mesh22096
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -31187,7 +31502,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13770
+  m_Name: pb_Mesh23042
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -31424,6 +31739,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!1 &1640608797
 GameObject:
   m_ObjectHideFlags: 0
@@ -32084,6 +32403,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!1 &1649588201
 GameObject:
   m_ObjectHideFlags: 0
@@ -32923,12 +33246,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!43 &1654342660
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh12556
+  m_Name: pb_Mesh21914
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -33858,7 +34185,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13384
+  m_Name: pb_Mesh22674
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -33988,7 +34315,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13630
+  m_Name: pb_Mesh22914
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -34518,7 +34845,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13370
+  m_Name: pb_Mesh22658
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -34648,7 +34975,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13044
+  m_Name: pb_Mesh22382
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -35927,7 +36254,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13474
+  m_Name: pb_Mesh22766
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -36057,7 +36384,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13168
+  m_Name: pb_Mesh22476
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -37421,6 +37748,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!1 &1936473285
 GameObject:
   m_ObjectHideFlags: 0
@@ -37826,7 +38157,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13786
+  m_Name: pb_Mesh23058
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -37993,6 +38324,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!1 &1946549419
 GameObject:
   m_ObjectHideFlags: 0
@@ -38035,12 +38370,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!43 &1963801215
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13080
+  m_Name: pb_Mesh22402
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -39025,6 +39364,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!1 &2004456903
 GameObject:
   m_ObjectHideFlags: 0
@@ -39830,7 +40173,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh12540
+  m_Name: pb_Mesh21898
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -39960,7 +40303,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13970
+  m_Name: pb_Mesh23232
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -41290,7 +41633,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13334
+  m_Name: pb_Mesh22620
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -43013,6 +43356,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!1 &2089584464
 GameObject:
   m_ObjectHideFlags: 0
@@ -43055,12 +43402,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!43 &2094097914
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh12682
+  m_Name: pb_Mesh22038
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -43983,12 +44334,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23358ac86c5654257858786083af2899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  blockAudio: {fileID: 1104322587}
+  hitClip: {fileID: 8300000, guid: edc63164b8e2b4a608930be7c2656c2e, type: 3}
+  destroyClip: {fileID: 8300000, guid: 1be55a3d189a54e7190521a9e2398061, type: 3}
 --- !u!43 &2115847431
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh14114
+  m_Name: pb_Mesh23368
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -44199,7 +44554,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh12790
+  m_Name: pb_Mesh22132
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -44329,7 +44684,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13910
+  m_Name: pb_Mesh23166
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2

@@ -6,6 +6,6 @@ using UnityEngine.SceneManagement;
 public class GameStarter : MonoBehaviour {
 
 	public void startGame() { 
-		UnityEngine.SceneManagement.SceneManager.LoadScene ("AlphaDemo_Final");
+		UnityEngine.SceneManagement.SceneManager.LoadScene ("AlphaDemoFinal");
 	}
 }

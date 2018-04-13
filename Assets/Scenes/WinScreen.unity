@@ -2336,7 +2336,7 @@ GameObject:
   - component: {fileID: 101083029}
   - component: {fileID: 101083028}
   m_Layer: 0
-  m_Name: TextMeshPro Text
+  m_Name: WinText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17786,12 +17786,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 788283339}
-        m_MethodName: 
+      - m_Target: {fileID: 788283341}
+        m_MethodName: ExitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -44722,7 +44722,7 @@ GameObject:
   - component: {fileID: 1996608271}
   - component: {fileID: 1996608270}
   m_Layer: 0
-  m_Name: TextMeshPro Text
+  m_Name: QuitText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

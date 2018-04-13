@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -28,7 +29,19 @@ public class UIManager : MonoBehaviour
 
 	void Update ()
 	{
-		score_text.text = "Score: " + score;
-		ammo_text.text = "Ammo: " + controlscript.getAmmo();
+		if (score > 25 && controlscript.getAmmo() != 0) 
+		{
+			UnityEngine.SceneManagement.SceneManager.LoadScene ("WinScreen");
+		} 
+		else if (controlscript.getAmmo() <= 0) 
+		{
+			UnityEngine.SceneManagement.SceneManager.LoadScene ("LoseScreen");
+		} 
+		else 
+		{
+			score_text.text = "SCORE: " + score;
+			ammo_text.text = "AMMO: " + controlscript.getAmmo();
+		}
+		
 	}
 }

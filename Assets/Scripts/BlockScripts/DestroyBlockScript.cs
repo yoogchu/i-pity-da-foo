@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class DestroyBlockScript: MonoBehaviour {
 
@@ -11,6 +12,8 @@ public class DestroyBlockScript: MonoBehaviour {
 	public AudioSource blockAudio;
 	public AudioClip hitClip;
 	public AudioClip destroyClip;
+
+	public UIManager ui_manager;
 
 	void Start() {
 		a = gameObject.GetComponent<Rigidbody> ();
@@ -26,9 +29,12 @@ public class DestroyBlockScript: MonoBehaviour {
 		if (gameObject != null && collision.gameObject.GetComponent<Rigidbody> () != null && collision.gameObject.GetComponent<Rigidbody>().velocity.magnitude > 1) {
 			health -= KineticEnergy (collision.gameObject.GetComponent<Rigidbody> ());
 			if (health < 0f) {
+				ui_manager.addScore (1);
+
 				blockAudio.clip = destroyClip;
 				blockAudio.Play ();
 				Destroy (gameObject);
+
 			} else {
 				blockAudio.clip = hitClip;
 				blockAudio.Play ();

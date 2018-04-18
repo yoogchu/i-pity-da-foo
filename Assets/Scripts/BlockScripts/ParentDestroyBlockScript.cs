@@ -9,13 +9,18 @@ public class ParentDestroyBlockScript: MonoBehaviour
 	public AudioClip hitClip;
 	public AudioClip destroyClip;
 
+	public Canvas UI;
+
 	void Start() {
+
 		foreach (Transform child in transform) {
 			DestroyBlockScript a = child.gameObject.AddComponent<DestroyBlockScript> ();
 			a.healthCoefficient = healthCoefficient;
 			a.blockAudio = blockAudio;
 			a.hitClip = hitClip;
 			a.destroyClip = destroyClip;
+			a.ui_manager = UI.GetComponent<UIManager> ();
+
 		}
 	}
 	

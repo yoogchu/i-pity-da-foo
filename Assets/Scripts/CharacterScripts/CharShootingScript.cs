@@ -32,6 +32,10 @@ public class CharShootingScript : MonoBehaviour {
 	private void Start () {
         mChargeSpeed = (maxLaunchForce - minLaunchForce) / maxChargeTime;
 	}
+
+	public int getAmmo() {
+		return (int) ammo;
+	}
 	
 	private void Update () {
         // At max charge but not yet fired

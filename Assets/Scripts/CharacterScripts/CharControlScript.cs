@@ -110,6 +110,13 @@ public class CharControlScript : MonoBehaviour {
         anim.SetFloat("Vertical", anim_v, 0.15f, delta);
     }
 
+    // Update Animations on Run Case
+    void HandleAnimationsRunning()
+    {
+        float anim_v = cinput.moveAmount;
+        anim.SetFloat("Vertical", anim_v, 0.15f, delta);
+    }
+
     // Update Animations on Aiming Case
     void HandleAnimationsAiming()
     {
@@ -139,8 +146,11 @@ public class CharControlScript : MonoBehaviour {
         {
             MovementAiming();
             HandleAnimationsAiming();
-        } else
-        {
+        }
+        else if (isRunning) {
+            MovementNormal();
+            HandleAnimationsRunning();
+        } else {
             MovementNormal();
             HandleAnimationsNormal();
         }
@@ -156,6 +166,7 @@ public class CharControlScript : MonoBehaviour {
             explodeTime = 0;
             explode = false;
             isAiming = cinput.aimInput;
+            isRunning = cinput.runInput;
             onGround = OnGroundTest();
         }
 

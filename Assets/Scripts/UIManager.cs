@@ -12,36 +12,70 @@ public class UIManager : MonoBehaviour
 	public Text ammo_text;
 
 	public GameObject character;
-	CharShootingScript controlscript;
+	CharShootingScript shootScript;
+    CharControlScript controlScript;
 
+    CanvasGroup crosshairManager;
 
 	void Awake ()
 	{
 		score = 0;
 		ammo = 10;
 
-		controlscript = character.GetComponent<CharShootingScript> ();
-	}
+        shootScript = character.GetComponent<CharShootingScript> ();
+        controlScript = character.GetComponent<CharControlScript>();
+        crosshairManager = GetComponentInChildren<CanvasGroup>();
 
-	public void addScore(int increment) {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    public void addScore(int increment) {
 		score+= increment;
 	}
 
 	void Update ()
 	{
-		if (score > 25 && controlscript.getAmmo() != 0) 
+		if (score > 25 && shootScript.getAmmo() >= 0) 
 		{
-			UnityEngine.SceneManagement.SceneManager.LoadScene ("WinScreen");
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            UnityEngine.SceneManagement.SceneManager.LoadScene ("WinScreen");
+
 		} 
-		else if (controlscript.getAmmo() <= 0) 
+		else if (shootScript.getAmmo() <= 0) 
 		{
-			UnityEngine.SceneManagement.SceneManager.LoadScene ("LoseScreen");
+            StartCoroutine(SlowMoAndWait());
 		} 
 		else 
 		{
 			score_text.text = "SCORE: " + score;
-			ammo_text.text = "AMMO: " + controlscript.getAmmo();
+			ammo_text.text = "AMMO: " + shootScript.getAmmo();
 		}
-		
+
+        if (controlScript.isAiming)
+        {
+            crosshairManager.alpha = 1;
+        } else
+        {
+            crosshairManager.alpha = 0;
+        }
 	}
+
+    IEnumerator SlowMoAndWait()
+    {
+        Time.timeScale = 0.3f;
+        yield return new WaitForSeconds(3.0f);
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        if (score > 25)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("WinScreen");
+
+        } else {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("LoseScreen");
+        }
+    }
 }

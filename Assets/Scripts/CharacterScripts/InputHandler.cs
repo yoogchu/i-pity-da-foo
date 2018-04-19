@@ -38,6 +38,11 @@ public class InputHandler : MonoBehaviour {
         get;
         private set;
     }
+    public bool runInput
+    {
+        get;
+        private set;
+    }
 
     void FixedUpdate()
     {
@@ -65,6 +70,7 @@ public class InputHandler : MonoBehaviour {
     void Update()
     {
         // TODO: Determine proper aim controls (AIM and FIRE?)
-        aimInput = Input.GetMouseButton(1);
+        aimInput = Input.GetButton("Fire2");
+        runInput = Input.GetButton("Run");
     }
 }

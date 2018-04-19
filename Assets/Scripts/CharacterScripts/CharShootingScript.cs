@@ -17,7 +17,7 @@ public class CharShootingScript : MonoBehaviour {
     public float minLaunchForce = 15f;
     public float maxLaunchForce = 30f;
     public float maxChargeTime = .75f;
-    public float ammo = 5;
+    public float ammo;
 
     private float mCurrentLaunchForce;
     private float mChargeSpeed;
@@ -43,7 +43,6 @@ public class CharShootingScript : MonoBehaviour {
         {
             if (ccScript.explode)
             {
-                Debug.Log("Explode");
                 mCurrentLaunchForce = minLaunchForce;
                 Fire();
                 ccScript.isAiming = false;
@@ -59,8 +58,8 @@ public class CharShootingScript : MonoBehaviour {
                 mCurrentLaunchForce = minLaunchForce;
 
                 // Play charging sounds
-                //shootingAudio.clip = chargingClip;
-                //shootingAudio.Play();
+                shootingAudio.clip = chargingClip;
+                shootingAudio.Play();
 
                 // Render Launch Arc
                 float angle = Vector3.Angle(Vector3.forward, new Vector3(0, releasePoint.forward.y + .1f, 1));
@@ -89,12 +88,20 @@ public class CharShootingScript : MonoBehaviour {
         {
             mFired = false;
             mCurrentLaunchForce = minLaunchForce;
+
+            // Remove any current launching indicators
+            launchMeshScript.ClearMesh();
+            shootingAudio.Stop();
         }
 	}
 
     private void Fire()
     {
         mFired = true;
+
+        // Play firing sound
+        shootingAudio.clip = fireClip;
+        shootingAudio.Play();
 
         // Instantiate Projectile with velocity
         //Rigidbody projectileInstance = Instantiate(projectile, releasePoint.position, releasePoint.rotation) as Rigidbody;
@@ -106,10 +113,6 @@ public class CharShootingScript : MonoBehaviour {
         Rigidbody ragMainRbody = ragMain.GetComponent<Rigidbody>();
         ragMainRbody.velocity = mCurrentLaunchForce * releasePoint.forward;
 		ragInstance.tag = "Projectile";
-
-        // Play firing sound
-        //shootingAudio.clip = fireClip;
-        //shootingAudio.Play();
 
         // Reset Launch force
         mCurrentLaunchForce = minLaunchForce;

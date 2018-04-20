@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4461701, g: 0.6250756, b: 0.72317654, a: 1}
+  m_IndirectSpecularColor: {r: 0.4461605, g: 0.6250888, b: 0.72317517, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -3839,7 +3839,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh19782
+  m_Name: pb_Mesh17398
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -6310,7 +6310,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh14566
+  m_Name: pb_Mesh17950
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -12240,7 +12240,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh20136
+  m_Name: pb_Mesh17776
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -16805,7 +16805,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh20052
+  m_Name: pb_Mesh17688
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -22790,7 +22790,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a5b91901966f064e804880cb4287249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGrounded: 0
+  explode: 0
+  explodeTime: 0
   walkSpeed: 4
   sprintSpeed: 5
   crouchSpeed: 2
@@ -24688,6 +24689,21 @@ Prefab:
         type: 2}
       propertyPath: m_Colors.m_PressedColor.a
       value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 114162624329644842, guid: a790eccdc24bc4253bb667ea9d50405e,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1758370642}
+    - target: {fileID: 114162624329644842, guid: a790eccdc24bc4253bb667ea9d50405e,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 114162624329644842, guid: a790eccdc24bc4253bb667ea9d50405e,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a790eccdc24bc4253bb667ea9d50405e, type: 2}
@@ -40611,6 +40627,12 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!114 &1758370642 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114759251898370330, guid: a790eccdc24bc4253bb667ea9d50405e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1041172155}
+  m_Script: {fileID: 11500000, guid: 48af7b29e7a134148ba2be452785df0f, type: 3}
 --- !u!43 &1769237787
 Mesh:
   m_ObjectHideFlags: 0

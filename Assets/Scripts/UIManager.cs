@@ -45,6 +45,7 @@ public class UIManager : MonoBehaviour
 		} 
 		else if (shootScript.getAmmo() <= 0) 
 		{
+            ammo_text.text = "AMMO: " + shootScript.getAmmo();
             StartCoroutine(SlowMoAndWait());
 		} 
 		else 
@@ -65,10 +66,11 @@ public class UIManager : MonoBehaviour
     IEnumerator SlowMoAndWait()
     {
         Time.timeScale = 0.3f;
-        yield return new WaitForSeconds(3.0f);
+        yield return new WaitForSecondsRealtime(3.0f);
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        Time.timeScale = 1f;
 
         if (score > 25)
         {

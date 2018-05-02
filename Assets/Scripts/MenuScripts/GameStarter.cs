@@ -11,6 +11,10 @@ public class GameStarter : MonoBehaviour {
 
 	public void MainMenuScreen() { 
 		UnityEngine.SceneManagement.SceneManager.LoadScene ("MainMenu");
+		Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        Time.timeScale = 1f;
+		PauseMenu.gamePaused = false;
 	}
 
 	public void LevelOne() { 

@@ -48,13 +48,13 @@ public class UIManager : MonoBehaviour
 		} 
 		else if (shootScript.getAmmo() <= 0) 
 		{
-            ammo_text.text = "AMMO: " + shootScript.getAmmo();
+            ammo_text.text = "AMMO: " + shootScript.getAmmo() + "/" + ammo; 
             StartCoroutine(SlowMoAndWait());
 		} 
 		else 
 		{
 			score_text.text = "SCORE: " + score;
-			ammo_text.text = "AMMO: " + shootScript.getAmmo();
+			ammo_text.text = "AMMO: " + shootScript.getAmmo() + "/" + ammo;
 		}
 
         if (controlScript.isAiming)

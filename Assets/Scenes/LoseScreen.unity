@@ -17786,7 +17786,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 788283341}
-        m_MethodName: startGame
+        m_MethodName: MainMenuScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23236,6 +23236,7 @@ MonoBehaviour:
   maxLaunchForce: 150
   maxChargeTime: 0.75
   ammo: 5
+  justFired: 0
 --- !u!43 &983423137
 Mesh:
   m_ObjectHideFlags: 0

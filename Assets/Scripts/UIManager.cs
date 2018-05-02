@@ -14,6 +14,9 @@ public class UIManager : MonoBehaviour
 	public int win_condition;
 
 	public GameObject character;
+    public GameObject star1;
+    public GameObject star2;
+    public GameObject star3;
 	CharShootingScript shootScript;
     CharControlScript controlScript;
 
@@ -56,11 +59,20 @@ public class UIManager : MonoBehaviour
 			score_text.text = "SCORE: " + score;
 			ammo_text.text = "AMMO: " + shootScript.getAmmo() + "/" + ammo;
 
-			if (score >= (int)win_condition * (2 / 3)) {
-				// fill in 2 stars 
-			} else if (score >= (int)win_condition * (1 / 3)) {
+			if (score >= win_condition * (0.3)) {
 				// fill in 1 star
+                star1.SetActive(true);
 			}
+            
+            if (score >= win_condition * (0.667)) {
+				// fill in 2 stars
+                star2.SetActive(true);
+			}
+            
+            if (score >= win_condition - 2) {
+                // fill in 3 stars
+                star3.SetActive(true);
+            }
 		}
 
         if (controlScript.isAiming)

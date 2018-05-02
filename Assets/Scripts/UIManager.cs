@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
@@ -10,12 +11,14 @@ public class UIManager : MonoBehaviour
 
 	public Text score_text;
 	public Text ammo_text;
+	public int win_condition;
 
 	public GameObject character;
 	CharShootingScript shootScript;
     CharControlScript controlScript;
 
     CanvasGroup crosshairManager;
+
 
 	void Awake ()
 	{
@@ -36,7 +39,7 @@ public class UIManager : MonoBehaviour
 
 	void Update ()
 	{
-		if (score > 25 && shootScript.getAmmo() >= 0) 
+		if (score >= win_condition && shootScript.getAmmo() >= 0) 
 		{
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -72,7 +75,7 @@ public class UIManager : MonoBehaviour
         Cursor.visible = true;
         Time.timeScale = 1f;
 
-        if (score > 25)
+		if (score > win_condition)
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene("WinScreen");
 

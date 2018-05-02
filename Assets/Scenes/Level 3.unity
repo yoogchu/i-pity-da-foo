@@ -9019,6 +9019,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score_text: {fileID: 1530365700}
   ammo_text: {fileID: 407147551}
+  win_condition: 100
   character: {fileID: 978662161}
 --- !u!1001 &503892442
 Prefab:

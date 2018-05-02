@@ -5645,7 +5645,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1548682854
+  randomSeed: -1878098426
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -12969,6 +12969,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score_text: {fileID: 1530365700}
   ammo_text: {fileID: 407147551}
+  win_condition: 125
   character: {fileID: 978662161}
 --- !u!1001 &504474129
 Prefab:

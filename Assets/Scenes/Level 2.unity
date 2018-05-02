@@ -14068,6 +14068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score_text: {fileID: 1530365700}
   ammo_text: {fileID: 407147551}
+  win_condition: 30
   character: {fileID: 978662161}
 --- !u!1 &513005491
 GameObject:
@@ -19846,7 +19847,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh44264
+  m_Name: pb_Mesh150748
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2

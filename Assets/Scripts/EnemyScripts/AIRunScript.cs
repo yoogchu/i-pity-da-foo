@@ -17,6 +17,9 @@ public class AIRunScript : MonoBehaviour {
     public float switchProb;
     public CharShootingScript shootScript;
 
+    public GameObject exclaim;
+    private GameObject exclaimInstance;
+
     private NavMeshAgent navMesh;
     private Animator anim;
     public bool pause;
@@ -63,6 +66,8 @@ public class AIRunScript : MonoBehaviour {
 
                     if (angle <= 45.0f)
                     {
+                        exclaimInstance = Instantiate(exclaim, transform);
+                        exclaimInstance.transform.localPosition = Vector3.up;
                         aiState = AIState.RunFromProjectile;
                     }
                     shootScript.justFired = false;
@@ -93,6 +98,7 @@ public class AIRunScript : MonoBehaviour {
                     navMesh.acceleration = 8;
                     navMesh.speed = 3.5f;
                     aiState = AIState.PatrolWaypoints;
+                    Destroy(exclaimInstance);
                 }
                 break;
             default:

@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
 	public static int score;
-	public static int ammo;
+	public int ammo;
 
 	public Text score_text;
 	public Text ammo_text;
@@ -26,7 +26,6 @@ public class UIManager : MonoBehaviour
 	void Awake ()
 	{
 		score = 0;
-		ammo = 10;
 
         shootScript = character.GetComponent<CharShootingScript> ();
         controlScript = character.GetComponent<CharControlScript>();
@@ -59,17 +58,17 @@ public class UIManager : MonoBehaviour
 			score_text.text = "SCORE: " + score;
 			ammo_text.text = "AMMO: " + shootScript.getAmmo() + "/" + ammo;
 
-			if (score >= win_condition * (0.3)) {
+			if (score >= win_condition * (0.5)) {
 				// fill in 1 star
                 star1.SetActive(true);
 			}
             
-            if (score >= win_condition * (0.667)) {
+            if (score >= win_condition * (0.7)) {
 				// fill in 2 stars
                 star2.SetActive(true);
 			}
             
-            if (score >= win_condition - 2) {
+            if (score >= win_condition * (0.9)) {
                 // fill in 3 stars
                 star3.SetActive(true);
             }

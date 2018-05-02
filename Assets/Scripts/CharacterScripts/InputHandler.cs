@@ -7,6 +7,7 @@ public class InputHandler : MonoBehaviour {
     bool crouchInput;
 
     public CameraHandler camHandler;
+    public Vector3 aimPos;
 
     public float moveAmount
     {
@@ -58,6 +59,16 @@ public class InputHandler : MonoBehaviour {
 
         // Rotation Direction is based on camera
         rotDirection = camHandler.mTransform.forward;
+
+        // Handle Aim Position
+        Ray ray = new Ray(camHandler.mTransform.position, camHandler.mTransform.forward);
+        aimPos = ray.GetPoint(30);
+
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, 100, 0))
+        {
+            aimPos = hit.point;
+        }
     }
 
     // Get the input values

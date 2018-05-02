@@ -55,6 +55,12 @@ public class UIManager : MonoBehaviour
 		{
 			score_text.text = "SCORE: " + score;
 			ammo_text.text = "AMMO: " + shootScript.getAmmo() + "/" + ammo;
+
+			if (score >= (int)win_condition * (2 / 3)) {
+				// fill in 2 stars 
+			} else if (score >= (int)win_condition * (1 / 3)) {
+				// fill in 1 star
+			}
 		}
 
         if (controlScript.isAiming)

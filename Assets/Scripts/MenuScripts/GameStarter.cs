@@ -33,8 +33,4 @@ public class GameStarter : MonoBehaviour {
 		UnityEngine.SceneManagement.SceneManager.LoadScene ("Level 4");
 	}
 
-	public void LevelFive() { 
-		UnityEngine.SceneManagement.SceneManager.LoadScene ("Level 5");
-	}
-
 }

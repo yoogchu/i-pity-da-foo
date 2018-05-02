@@ -20,6 +20,8 @@ public class CharShootingScript : MonoBehaviour {
     public float ammo;
 
     private float mCurrentLaunchForce;
+    private float mCurrentAngle;
+    public bool justFired;
     private float mChargeSpeed;
     private bool mFired;
 
@@ -62,10 +64,10 @@ public class CharShootingScript : MonoBehaviour {
                 shootingAudio.Play();
 
                 // Render Launch Arc
-                float angle = Vector3.Angle(Vector3.forward, new Vector3(0, releasePoint.forward.y + .1f, 1));
+                mCurrentAngle = Vector3.Angle(Vector3.forward, new Vector3(0, releasePoint.forward.y + .1f, 1));
                 // HACK: Launch arc calcs don't really work for negative angles
-                angle = releasePoint.forward.y > 0 ? angle : -angle;
-                launchMeshScript.RedrawArc(mCurrentLaunchForce / 6, angle);
+                mCurrentAngle = releasePoint.forward.y > 0 ? mCurrentAngle : -mCurrentAngle;
+                launchMeshScript.RedrawArc(mCurrentLaunchForce / 6, mCurrentAngle);
             }
             else if (Input.GetButton("Fire1") && !mFired)
             {
@@ -73,10 +75,10 @@ public class CharShootingScript : MonoBehaviour {
                 mCurrentLaunchForce += mChargeSpeed * Time.deltaTime;
 
                 // Set launch arc to new direction and power
-                float angle = Vector3.Angle(Vector3.forward, new Vector3(0, releasePoint.forward.y + .1f, 1));
+                mCurrentAngle = Vector3.Angle(Vector3.forward, new Vector3(0, releasePoint.forward.y + .1f, 1));
                 //angle = releasePoint.forward.y > 0 ? angle : 0.1f;
-                angle = releasePoint.forward.y > 0 ? angle : -angle;
-                launchMeshScript.RedrawArc(mCurrentLaunchForce / 6, angle);
+                mCurrentAngle = releasePoint.forward.y > 0 ? mCurrentAngle : -mCurrentAngle;
+                launchMeshScript.RedrawArc(mCurrentLaunchForce / 6, mCurrentAngle);
                 Debug.DrawRay(releasePoint.position + 2 * releasePoint.forward, releasePoint.forward * mCurrentLaunchForce);
             }
             else if (Input.GetButtonUp("Fire1") && !mFired)
@@ -98,6 +100,7 @@ public class CharShootingScript : MonoBehaviour {
     private void Fire()
     {
         mFired = true;
+        justFired = true;
 
         // Play firing sound
         shootingAudio.clip = fireClip;
